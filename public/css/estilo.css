@@ -188,14 +188,37 @@ button {
 .btn-primary:hover, .btn-secondary:hover {
     background-color: #7c4dff;
 }
-.btn-secondary:hover {
-    color: #fff;
+/* Estilo General del Botón Secondary */
+.btn-secondary {
+    display: inline-block;
+    padding: 12px 25px; /* Tamaño adecuado para el botón */
+    font-size: 16px;
+    font-weight: bold;
+    color: #8e44ad; /* Color morado base */
+    background-color: #fefeff; /* Fondo blanco para el botón */
+    border: 2px solid #8e44ad; /* Borde morado para consistencia con el color del texto */
+    border-radius: 5px; /* Bordes redondeados para un aspecto moderno */
+    text-decoration: none; /* Quitar subrayado */
+    transition: all 0.3s ease; /* Transición suave para el hover */
+    cursor: pointer; /* Cambiar el cursor a mano para indicar que es clickeable */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Añadir una ligera sombra para que se destaque del fondo */
 }
 
+/* Estilo del Botón Secondary en Hover */
 .btn-secondary:hover {
-    background-color: #a35ff9;
-    color: #fff; /* Cambio de color del texto cuando el fondo está coloreado */
+    background-color: #8e44ad; /* Fondo morado al hacer hover */
+    color: #fff; /* Texto blanco al hacer hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Aumentar la sombra para hacer el botón más atractivo */
+    transform: translateY(-2px); /* Elevar el botón un poco al hacer hover */
 }
+
+/* Estilo del Botón Secondary en Activo (cuando se hace clic) */
+.btn-secondary:active {
+    background-color: #7a3cb9; /* Un tono más oscuro para dar la sensación de clic */
+    transform: translateY(1px); /* Hundir el botón un poco para indicar que se está presionando */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Reducir la sombra al presionar */
+}
+
 
 .derecha a {
     display: inline-block;
@@ -218,6 +241,8 @@ button {
     background-color: #7a3cb9; /* Color más oscuro en hover */
     transform: scale(1.05); /* Aumentar ligeramente el tamaño del botón */
 }
+
+
 
 #sobremi {
     padding: 50px 10px;
@@ -1237,3 +1262,157 @@ body {
         justify-content: center;
     }
 }   
+
+/* Estilo General de la Sección de Habilidades */
+.habilidades {
+    padding: 50px 10px;
+    color: #fff;
+}
+
+.habilidades .contenido {
+    max-width: 1100px;
+    margin: auto;
+}
+
+.habilidades .habilidades-contenido {
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+.habilidades .col {
+    flex: 1;
+    min-width: 250px;
+}
+
+.habilidades .col h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.barra {
+    margin-bottom: 20px;
+}
+
+.barra p {
+    font-size: 16px;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.barra-container {
+    width: 100%;
+    height: 25px; /* Aumentar un poco la altura para que el porcentaje sea más visible */
+    background-color: #333;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+}
+
+.barra-progreso {
+    height: 100%;
+    background-color: #2980b9; /* Azul para las barras de progreso */
+    width: 0;
+    border-radius: 10px;
+    position: relative;
+    transition: width 1.5s ease; /* Efecto de animación */
+    display: flex;
+    align-items: center;
+    padding-left: 10px; /* Espacio para el porcentaje */
+}
+
+/* Colores específicos para cada barra */
+.barra-progreso.js { background-color: #8e44ad; }
+.barra-progreso.html-css { background-color: #8e44ad; }
+.barra-progreso.cpp { background-color: #8e44ad; }
+.barra-progreso.csharp { background-color: #8e44ad; }
+.barra-progreso.java { background-color: #8e44ad; }
+.barra-progreso.comunicacion { background-color: #8e44ad; }
+.barra-progreso.trabajo-equipo { background-color: #8e44ad; }
+.barra-progreso.creatividad { background-color: #8e44ad; }
+.barra-progreso.flexibilidad { background-color: #8e44ad; }
+.barra-progreso.adaptacion { background-color: #8e44ad; }
+
+/* Porcentaje dentro de la Barra */
+.barra-progreso .porcentaje {
+    font-weight: bold;
+    color: #fff;
+    position: absolute;
+    right: 10px; /* Colocar el porcentaje a la derecha de la barra */
+    transform: translateY(-50%);
+    top: 50%;
+}
+
+/* Responsividad para la Sección de Habilidades */
+@media screen and (max-width: 920px) {
+    .habilidades .habilidades-contenido {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+
+
+
+/* Estilo General de la Sección de Datos Personales */
+#datos-personales {
+    padding: 30px 20px;
+    background-color: #2a2a2a; /* Fondo oscuro para que contraste bien */
+    color: #fff;
+    border-radius: 10px; /* Bordes redondeados para mejorar la apariencia */
+    margin: 20px 0; /* Espacio superior e inferior */
+    max-width: 600px; /* Limitar el ancho máximo */
+    margin: 20px auto; /* Centramos la sección entera horizontalmente */
+}
+
+#datos-personales .titulo-seccion {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #fff; /* Mantener el color blanco para que el título resalte */
+    text-align: left; /* Alinear el título a la izquierda */
+}
+
+/* Contenedor del Contenido */
+#datos-personales .contenido {
+    text-align: left; /* Alinear el contenido a la izquierda */
+}
+
+/* Estructura de la Lista de Datos usando Flexbox */
+#datos-personales .lista-datos {
+    list-style: none; /* Quitar los puntos de la lista */
+    padding: 0;
+    font-size: 16px;
+    display: flex;
+    flex-direction: column; /* Los elementos se muestran en columna */
+    gap: 15px; /* Espacio uniforme entre las filas */
+}
+
+#datos-personales .lista-datos li {
+    display: flex;
+    align-items: center; /* Alinear verticalmente la etiqueta y el valor */
+}
+
+#datos-personales .etiqueta {
+    font-weight: bold;
+    color: #8e44ad; /* Color para las etiquetas */
+    min-width: 120px; /* Ancho mínimo para las etiquetas para alinear correctamente */
+    text-align: left; /* Alinear el texto de las etiquetas a la izquierda */
+    margin-right: 15px; /* Espacio entre la etiqueta y el valor */
+}
+
+#datos-personales .valor {
+    flex: 1; /* La columna del valor ocupa el espacio restante */
+    text-align: left; /* Alinear el valor a la izquierda */
+}
+
+/* Ajustes responsivos para pantallas pequeñas */
+@media screen and (max-width: 600px) {
+    #datos-personales .lista-datos li {
+        flex-direction: column; /* Alinear los elementos de la lista en columna en pantallas pequeñas */
+        align-items: flex-start; /* Alinear a la izquierda en pantallas pequeñas */
+    }
+
+    #datos-personales .etiqueta {
+        margin-bottom: 5px; /* Espacio adicional debajo de la etiqueta para pantallas pequeñas */
+    }
+}

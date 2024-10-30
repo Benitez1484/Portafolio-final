@@ -56,3 +56,30 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
 });
+
+document.addEventListener("DOMContentLoaded", function() {
+  const barras = document.querySelectorAll(".barra-progreso");
+
+  const activarBarras = () => {
+      barras.forEach(barra => {
+          const porcentaje = barra.getAttribute("data-porcentaje");
+          barra.style.width = `${porcentaje}%`;
+      });
+  };
+
+  const opcionesObserver = {
+      threshold: 0.5, // Se activa cuando al menos el 50% de la sección es visible
+  };
+
+  const observer = new IntersectionObserver((entradas) => {
+      entradas.forEach(entrada => {
+          if (entrada.isIntersecting) {
+              activarBarras();
+              observer.disconnect(); // Desconectar una vez que se haya activado
+          }
+      });
+  }, opcionesObserver);
+
+  const habilidadesSeccion = document.querySelector("#habilidades");
+  observer.observe(habilidadesSeccion);
+});

@@ -10,34 +10,117 @@
 <body>
 {{>header}}
 
-<section id="sobremi" class="sobremi">
+<section id="habilidades" class="habilidades">
     <div class="contenido">
-        <div class="fila">
-            <div class="col col-texto">
-                <h2 class="titulo-seccion">Sobre <span class="resaltado">mí</span></h2>
-                <p>Soy una persona que se adapta a las necesidades de la institución...</p>
-                <div class="skills">
-                    <p><span class="punto"></span> Desarrollo Web</p>
-                    <div class="barra-skill"><div class="progreso" id="dw"><span>30%</span></div></div>
-                    <p><span class="punto"></span> Photoshop</p>
-                    <div class="barra-skill"><div class="progreso" id="dg"><span>50%</span></div></div>
-                    <p><span class="punto"></span> Google Sheets</p>
-                    <div class="barra-skill"><div class="progreso" id="bd"><span>70%</span></div></div>
-                    <p><span class="punto"></span> Base de datos</p>
-                    <div class="barra-skill"><div class="progreso" id="md"><span>30%</span></div></div>
+        <h2 class="titulo-seccion">Habilidades</h2>
+        <div class="habilidades-contenido">
+            <!-- Habilidades Técnicas -->
+            <div class="col">
+                <h3>Habilidades Técnicas</h3>
+                <div class="barra">
+                    <p>Javascript</p>
+                    <div class="barra-container">
+                        <div class="barra-progreso js" data-porcentaje="45">
+                            <span class="porcentaje">45%</span>
+                        </div>
+                    </div>
                 </div>
-                <div class="boton-descarga-cv">
-                    <a href="/pdf/CV Benitez.pdf" download class="btn-primary descargar-cv">Descargar CV</a>
+                <div class="barra">
+                    <p>HTML & CSS</p>
+                    <div class="barra-container">
+                        <div class="barra-progreso html-css" data-porcentaje="50">
+                            <span class="porcentaje">50%</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="barra">
+                    <p>C++</p>
+                    <div class="barra-container">
+                        <div class="barra-progreso cpp" data-porcentaje="45">
+                            <span class="porcentaje">45%</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="barra">
+                    <p>C#</p>
+                    <div class="barra-container">
+                        <div class="barra-progreso csharp" data-porcentaje="40">
+                            <span class="porcentaje">40%</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="barra">
+                    <p>Java</p>
+                    <div class="barra-container">
+                        <div class="barra-progreso java" data-porcentaje="45">
+                            <span class="porcentaje">45%</span>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="col col-imagen">
-                <div class="imagen-container">
-                    <img src="/img/quiensoy.png" alt="Imagen sobre mí" class="imagen-sobremi">
+
+            <!-- Habilidades Profesionales -->
+            <div class="col">
+                <h3>Habilidades Profesionales</h3>
+                <div class="barra">
+                    <p>Comunicación</p>
+                    <div class="barra-container">
+                        <div class="barra-progreso comunicacion" data-porcentaje="80">
+                            <span class="porcentaje">80%</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="barra">
+                    <p>Trabajo en Equipo</p>
+                    <div class="barra-container">
+                        <div class="barra-progreso trabajo-equipo" data-porcentaje="75">
+                            <span class="porcentaje">75%</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="barra">
+                    <p>Creatividad</p>
+                    <div class="barra-container">
+                        <div class="barra-progreso creatividad" data-porcentaje="90">
+                            <span class="porcentaje">90%</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="barra">
+                    <p>Flexibilidad</p>
+                    <div class="barra-container">
+                        <div class="barra-progreso flexibilidad" data-porcentaje="65">
+                            <span class="porcentaje">65%</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="barra">
+                    <p>Capacidad de Adaptación</p>
+                    <div class="barra-container">
+                        <div class="barra-progreso adaptacion" data-porcentaje="80">
+                            <span class="porcentaje">80%</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </section>
+
+        <section id="datos-personales" class="datos-personales">
+    <div class="contenido">
+        <h2 class="titulo-seccion">Datos Personales</h2>
+        <ul class="lista-datos">
+            <li><span class="etiqueta">Linkedin:</span> BENITEZ SIMON</li>
+            <li><span class="etiqueta">Email:</span> santosbenitez2017@gmail.com</li>
+            <li><span class="etiqueta">Dirección:</span> Santa Cruz La Laguna, Sololá</li>
+        </ul>
+    </div>
+</section>
+
+    </div>
+</section>
+
 
 {{>footer}}
 </body>
