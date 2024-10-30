@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', function () {
     menuToggle.addEventListener('click', function() {
       navMenu.classList.toggle('active');
     });
+    
 
     // Cerrar menú al hacer clic en un enlace
     const navLinks = navMenu.querySelectorAll('a');
